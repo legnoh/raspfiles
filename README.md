@@ -2,6 +2,10 @@
 
 my home's raspberry pi setup docs
 
+```sh
+$ git clone https://github.com/legnoh/raspfiles.git
+```
+
 # include
 - ndenv
   - latest node.js
