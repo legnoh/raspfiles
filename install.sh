@@ -2,13 +2,14 @@
 
 set -e
 
-# install ndenv
-git clone https://github.com/riywo/ndenv ~/.ndenv
-echo 'export PATH="$HOME/.ndenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(ndenv init -)"' >> ~/.bashrc
+# install anyenv/ndenv
+git clone https://github.com/riywo/anyenv ~/.anyenv
+echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(anyenv init -)"' >> ~/.bashrc
 exec $SHELL -l
 
 # install node
+anyenv install ndenv
 ndenv install v10.11.0
 ndenv global v10.11.0
 ndenv rehash
