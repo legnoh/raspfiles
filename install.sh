@@ -14,14 +14,7 @@ ndenv install v10.11.0
 ndenv global v10.11.0
 ndenv rehash
 
-## install python
-sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-xz-utils tk-dev libffi-dev liblzma-dev
-anyenv install pyenv
-pyenv install 3.7.0
-pyenv global 3.7.0
-pyenv rehash
+## update pip
 pip install --upgrade pip
 
 # install homebridge
