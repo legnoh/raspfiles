@@ -2,17 +2,23 @@
 
 set -e
 
-# install anyenv/ndenv
+# install anyenv/ndenv/pyenv
 git clone https://github.com/riywo/anyenv ~/.anyenv
 echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(anyenv init -)"' >> ~/.bashrc
 exec $SHELL -l
 
-# install node
+## install node
 anyenv install ndenv
 ndenv install v10.11.0
 ndenv global v10.11.0
 ndenv rehash
+
+## install python
+anyenv install pyenv
+pyenv install v3.7.0
+pyenv global v3.7.0
+pyenv rehash
 
 # install homebridge
 npm install -g homebridge
