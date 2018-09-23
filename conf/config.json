@@ -20,7 +20,7 @@
       "accessories": [{
         "name": "Bath switch",
         "buttons": [{
-            "caption": "ふろ自動",
+            "caption": "autobath",
             "trigger": "bath_button"
         }]
       }]
