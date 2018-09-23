@@ -25,20 +25,20 @@ npm install -g https://github.com/paolotremadio/homebridge-minimal-http-blinds
 
 # make config file
 mkdir ~/.homebridge
-cp conf/config.json ~/.homebridge/config.json
+cp ~/raspfiles/conf/config.json ~/.homebridge/config.json
 
 # prepare SOMA smart blinds
 git clone https://github.com/paolotremadio/SOMA-Smart-Shades-HTTP-API.git ~/webshades
 cd webshades
-sudo pip install web.py
+pip install web.py
 
 # execute in daemon
 sudo useradd --system homebridge
 sudo mkdir /var/homebridge
 sudo chown homebridge:homebridge /var/homebridge/
-sudo cp conf/etc-default.conf /etc/default/homebridge
-sudo cp conf/service-homebridge.ini /etc/systemd/system/homebridge.service
-sudo cp conf/service-soma-blinds.ini /etc/systemd/system/somablinds.service
+sudo cp ~/raspfiles/conf/etc-default.conf /etc/default/homebridge
+sudo cp ~/raspfiles/conf/service-homebridge.ini /etc/systemd/system/homebridge.service
+sudo cp ~/raspfiles/conf/service-soma-blinds.ini /etc/systemd/system/somablinds.service
 sudo cp ~/.homebridge/config.json /var/homebridge/
 sudo cp -r ~/.homebridge/persist /var/homebridge
 sudo chmod -R 0777 /var/homebridge

@@ -30,16 +30,16 @@
     {
         "name": "Sliding Door 1",
         "accessory": "MinimalisticHttpBlinds",
-        "get_current_position_url": "http://192.168.1.2:8080/getposition/F6:AA:BB:CC:DD:EE",
-        "set_target_position_url": "http://192.168.1.2:8080/setposition/F6:AA:BB:CC:DD:EE/%position%",
+        "get_current_position_url": "http://127.0.0.1:8080/getposition/F6:AA:BB:CC:DD:EE",
+        "set_target_position_url": "http://127.0.0.1:8080/setposition/F6:AA:BB:CC:DD:EE/%position%",
         "set_target_position_method": "GET",
         "get_current_position_polling_millis": "300000"
     },
     {
         "name": "Sliding Door 2",
         "accessory": "MinimalisticHttpBlinds",
-        "get_current_position_url": "http://192.168.1.2:8080/getposition/F6:AA:BB:CC:DD:EE",
-        "set_target_position_url": "http://192.168.1.2:8080/setposition/F6:AA:BB:CC:DD:EE/%position%",
+        "get_current_position_url": "http://127.0.0.1:8080/getposition/F6:AA:BB:CC:DD:EE",
+        "set_target_position_url": "http://127.0.0.1:8080/setposition/F6:AA:BB:CC:DD:EE/%position%",
         "set_target_position_method": "GET",
         "get_current_position_polling_millis": "300000"
     }
