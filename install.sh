@@ -17,9 +17,18 @@ ndenv rehash
 npm install -g homebridge
 npm install -g homebridge-ifttt
 npm install -g homebridge-tado-ac
+npm install -g https://github.com/paolotremadio/homebridge-minimal-http-blinds
 
 # make config file
 touch ~/.homebridge/config.json
+
+# prepare soma smart blinds
+mkdir -p /home/pi/webshades/
+wget https://github.com/paolotremadio/SOMA-Smart-Shades-HTTP-API/archive/master.zip
+unzip -d /home/pi/webshades master.zip
+sudo hciconfig hci0 up
+sudo hcitool lescan
+sudo pip install webshades.py
 
 # execute in daemon
 sudo useradd --system homebridge

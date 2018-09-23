@@ -1,0 +1,29 @@
+{
+  "bridge": {
+    "name": "Homebridge",
+    "username": "",
+    "port": 51826,
+    "pin": ""
+  },
+
+  "platforms": [
+    {
+      "platform": "TadoAC",
+      "username": "",
+      "password": "",
+      "manualControl": true
+    },
+    {
+      "platform": "IFTTT",
+      "name": "IFTTT",
+      "makerkey": "",
+      "accessories": [{
+        "name": "Bath switch",
+        "buttons": [{
+            "caption": "ふろ自動",
+            "trigger": "bath_button"
+        }]
+      }]
+    }
+ ]
+}
