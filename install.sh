@@ -4,8 +4,8 @@ set -e
 
 # install ndenv
 git clone https://github.com/riywo/ndenv ~/.ndenv
-echo 'export PATH="$HOME/.ndenv/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(ndenv init -)"' >> ~/.bash_profile
+echo 'export PATH="$HOME/.ndenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(ndenv init -)"' >> ~/.bashrc
 exec $SHELL -l
 
 # install node
