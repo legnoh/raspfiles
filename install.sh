@@ -20,7 +20,7 @@ npm install -g homebridge-tado-ac
 npm install -g https://github.com/paolotremadio/homebridge-minimal-http-blinds
 
 # make config file
-touch ~/.homebridge/config.json
+cp conf/config.json ~/.homebridge/config.json
 
 # prepare soma smart blinds
 mkdir -p /home/pi/webshades/
