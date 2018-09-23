@@ -16,8 +16,8 @@ ndenv rehash
 
 ## install python
 anyenv install pyenv
-pyenv install v3.7.0
-pyenv global v3.7.0
+pyenv install 3.7.0
+pyenv global 3.7.0
 pyenv rehash
 
 # install homebridge
@@ -31,8 +31,7 @@ mkdir ~/.homebridge
 cp conf/config.json ~/.homebridge/config.json
 
 # prepare soma smart blinds
-mkdir -p ~/webshades/
-git clone https://github.com/paolotremadio/SOMA-Smart-Shades-HTTP-API.git ~/webshades/
+git clone https://github.com/paolotremadio/SOMA-Smart-Shades-HTTP-API.git ~/webshades
 sudo hciconfig hci0 up
 sudo hcitool lescan
 sudo pip install webshades.py
