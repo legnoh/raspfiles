@@ -22,6 +22,7 @@ anyenv install pyenv
 pyenv install 3.7.0
 pyenv global 3.7.0
 pyenv rehash
+pip install --upgrade pip
 
 # install homebridge
 npm install -g homebridge
@@ -36,7 +37,7 @@ cp conf/config.json ~/.homebridge/config.json
 # prepare SOMA smart blinds
 git clone https://github.com/paolotremadio/SOMA-Smart-Shades-HTTP-API.git ~/webshades
 cd webshades
-sudo pip install webshades.py
+sudo pip install web.py
 
 # execute in daemon
 sudo useradd --system homebridge
