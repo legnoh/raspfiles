@@ -32,6 +32,10 @@ git clone https://github.com/paolotremadio/SOMA-Smart-Shades-HTTP-API.git ~/webs
 cd webshades
 pip install web.py
 
+# https://bbs.archlinux.org/viewtopic.php?id=215080
+sudo setcap 'cap_net_raw,cap_net_admin+eip' `which hcitool`
+sudo setcap 'cap_net_raw,cap_net_admin+eip' `which hciconfig`
+
 # execute in daemon
 sudo useradd --system homebridge
 sudo mkdir /var/homebridge
