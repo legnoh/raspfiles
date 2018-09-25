@@ -1,6 +1,6 @@
 {
   "bridge": {
-    "name": "Homebridge",
+    "name": "HAL-Bridge",
     "username": "",
     "port": 51826,
     "pin": ""
