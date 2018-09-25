@@ -7,11 +7,9 @@ $ git clone https://github.com/legnoh/raspfiles.git
 ```
 
 # include
-- anyenv
-  - ndenv
+- [anyenv](https://github.com/riywo/anyenv)
+  - [ndenv](https://github.com/riywo/ndenv)
     - latest node.js
-  - pyenv
-    - latest python
 - node global library
   - [homebridge](https://github.com/nfarina/homebridge)
   - [homebridge-tado-ac](https://github.com/nitaybz/homebridge-tado-ac#readme)
