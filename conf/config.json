@@ -12,18 +12,6 @@
       "username": "",
       "password": "",
       "manualControl": true
-    },
-    {
-      "platform": "IFTTT",
-      "name": "IFTTT",
-      "makerkey": "",
-      "accessories": [{
-        "name": "Bath switch",
-        "buttons": [{
-            "caption": "autobath",
-            "trigger": "bath_button"
-        }]
-      }]
     }
   ],
   "accessories": [
