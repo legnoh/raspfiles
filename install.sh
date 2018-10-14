@@ -19,7 +19,7 @@ pip install --upgrade pip
 
 # install homebridge
 npm install -g homebridge
-npm install -g homebridge-ifttt
+npm install -g homebridge-http-switch
 npm install -g homebridge-tado-ac
 npm install -g https://github.com/paolotremadio/homebridge-minimal-http-blinds
 
