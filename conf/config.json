@@ -12,6 +12,18 @@
       "username": "",
       "password": "",
       "manualControl": true
+    },
+    {
+      "platform": "IFTTT",
+      "name": "IFTTT",
+      "makerkey": "",
+      "accessories": [{
+        "name": "Bath switch",
+        "buttons": [{
+            "caption": "autobath",
+            "trigger": "autobath_pressed"
+        }]
+      }]
     }
   ],
   "accessories": [
@@ -32,11 +44,7 @@
         "get_current_position_polling_millis": "30000"
     },
     {
-        "name": "Bath Switch",
-        "accessory": "HTTP-SWITCH",
-        "switchType": "stateless",
-        "timeout": 1000,
-        "onUrl": ""
+
     }
   ]
 }
