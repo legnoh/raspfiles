@@ -36,7 +36,7 @@
         "accessory": "HTTP-SWITCH",
         "switchType": "stateless",
         "timeout": 1000,
-        "onUrl": ""
+        "onUrl": "https://tokyo1.prota.space/....."
     }
   ]
 }
