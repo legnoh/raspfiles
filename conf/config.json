@@ -42,9 +42,6 @@
         "set_target_position_url": "http://raspberrypi.local:8080/setposition/F6:AA:BB:CC:DD:EE/%position%",
         "set_target_position_method": "GET",
         "get_current_position_polling_millis": "30000"
-    },
-    {
-
     }
   ]
 }
