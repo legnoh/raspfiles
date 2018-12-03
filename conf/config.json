@@ -37,6 +37,12 @@
         "switchType": "stateless",
         "timeout": 1000,
         "onUrl": "https://tokyo1.prota.space/....."
+    },
+    {
+        "accessory": "cec",
+        "name": "TV power",
+        "type": "power",
+        "address": 0
     }
   ]
 }

@@ -23,6 +23,12 @@ npm install -g homebridge-tado-ac
 npm install -g homebridge-http-switch
 npm install -g https://github.com/paolotremadio/homebridge-minimal-http-blinds
 
+# install fix branch versions homebridge-cec-accessory
+cd ~/.anyenv/envs/ndenv/versions/v10.11.0/lib/node_modules
+git clone https://github.com/jbree/homebridge-cec-accessory.git
+cd homebridge-cec-accessory
+git checkout -b branch-timeout-fix origin/branch-timeout-fix
+
 # make config file
 mkdir ~/.homebridge
 cp ~/raspfiles/conf/config.json ~/.homebridge/config.json
@@ -36,6 +42,12 @@ pip install web.py
 sudo setcap 'cap_net_raw,cap_net_admin+eip' `which hcitool`
 sudo setcap 'cap_net_raw,cap_net_admin+eip' `which hciconfig`
 
+# change permission of homebridge to cec
+sudo apt-get install cec-utils
+sudo usermod -a -G video homebridge
+sudo chown -R homebridge:homebridge /usr/bin/cec-client
+tvservice --off
+
 # execute in daemon
 sudo useradd --system homebridge
 sudo mkdir /var/homebridge
@@ -43,11 +55,14 @@ sudo chown homebridge:homebridge /var/homebridge/
 sudo cp ~/raspfiles/conf/etc-default.conf /etc/default/homebridge
 sudo cp ~/raspfiles/conf/service-homebridge.ini /etc/systemd/system/homebridge.service
 sudo cp ~/raspfiles/conf/service-soma-blinds.ini /etc/systemd/system/somablinds.service
+sudo cp ~/raspfiles/conf/service-cec-client.ini /etc/systemd/system/cecclient.service
 sudo cp ~/.homebridge/config.json /var/homebridge/
 sudo cp -r ~/.homebridge/persist /var/homebridge
 sudo chmod -R 0777 /var/homebridge
 sudo systemctl daemon-reload
 sudo systemctl enable somablinds
 sudo systemctl start somablinds
+sudo systemctl enable cecclient
+sudo systemctl start cecclient
 sudo systemctl enable homebridge
 sudo systemctl start homebridge
