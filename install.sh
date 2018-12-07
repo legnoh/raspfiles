@@ -38,9 +38,7 @@ cp ~/raspfiles/conf/config.json ~/.homebridge/config.json
 
 # prepare SOMA smart blinds
 git clone https://github.com/paolotremadio/SOMA-Smart-Shades-HTTP-API.git ~/webshades
-cd webshades
 sudo apt-get install python-webpy
-cd
 
 # https://bbs.archlinux.org/viewtopic.php?id=215080
 sudo setcap 'cap_net_raw,cap_net_admin+eip' `which hcitool`
