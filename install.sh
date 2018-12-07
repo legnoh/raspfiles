@@ -15,7 +15,7 @@ ndenv global v10.14.1
 ndenv rehash
 
 ## update pip
-pip install --upgrade pip
+sudo apt install python-pip
 
 # install homebridge
 npm install -g homebridge
