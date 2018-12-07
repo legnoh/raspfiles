@@ -63,6 +63,7 @@ sudo cp ~/raspfiles/conf/service-cec-client.ini /etc/systemd/system/cecclient.se
 sudo cp ~/.homebridge/config.json /var/homebridge/
 sudo cp -r ~/.homebridge/persist /var/homebridge
 sudo chmod -R 0777 /var/homebridge
+exec $SHELL -l
 sudo systemctl daemon-reload
 sudo systemctl enable somablinds
 sudo systemctl start somablinds
