@@ -47,12 +47,12 @@ sudo setcap 'cap_net_raw,cap_net_admin+eip' `which hciconfig`
 
 # change permission of homebridge to cec
 sudo apt-get install cec-utils
-sudo usermod -a -G video homebridge
-sudo chown -R homebridge:homebridge /usr/bin/cec-client
 tvservice --off
 
 # execute in daemon
 sudo useradd --system homebridge
+sudo usermod -a -G video homebridge
+sudo chown -R homebridge:homebridge /usr/bin/cec-client
 sudo mkdir /var/homebridge
 sudo chown homebridge:homebridge /var/homebridge/
 sudo cp ~/raspfiles/conf/etc-default.conf /etc/default/homebridge
