@@ -24,7 +24,7 @@ npm install -g homebridge-http-switch
 npm install -g https://github.com/paolotremadio/homebridge-minimal-http-blinds
 
 # install fix branch versions homebridge-cec-accessory
-cd ~/.anyenv/envs/ndenv/versions/v10.11.0/lib/node_modules
+cd ~/.anyenv/envs/ndenv/versions/v10.14.1/lib/node_modules
 git clone https://github.com/jbree/homebridge-cec-accessory.git
 cd homebridge-cec-accessory
 git checkout -b branch-timeout-fix origin/branch-timeout-fix
