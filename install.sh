@@ -28,6 +28,7 @@ cd ~/.anyenv/envs/ndenv/versions/v10.14.1/lib/node_modules
 git clone https://github.com/jbree/homebridge-cec-accessory.git
 cd homebridge-cec-accessory
 git checkout -b branch-timeout-fix origin/branch-timeout-fix
+npm install
 cd
 
 # make config file
