@@ -10,6 +10,7 @@ exec $SHELL -l
 
 ## install node
 anyenv install ndenv
+exec $SHELL -l
 ndenv install v10.14.1
 ndenv global v10.14.1
 ndenv rehash
@@ -61,9 +62,10 @@ sudo cp ~/raspfiles/conf/service-homebridge.ini /etc/systemd/system/homebridge.s
 sudo cp ~/raspfiles/conf/service-soma-blinds.ini /etc/systemd/system/somablinds.service
 sudo cp ~/raspfiles/conf/service-cec-client.ini /etc/systemd/system/cecclient.service
 sudo cp ~/.homebridge/config.json /var/homebridge/
-sudo cp -r ~/.homebridge/persist /var/homebridge
-sudo chmod -R 0777 /var/homebridge
+sudo mkdir -r /var/homebridge/persist
+sudo chown -R homebridge:homebridge ~/webshades
 exec $SHELL -l
+sudo chmod -R 0777 /var/homebridge
 sudo systemctl daemon-reload
 sudo systemctl enable somablinds
 sudo systemctl start somablinds
