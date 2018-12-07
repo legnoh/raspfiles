@@ -10,8 +10,8 @@ exec $SHELL -l
 
 ## install node
 anyenv install ndenv
-ndenv install v10.11.0
-ndenv global v10.11.0
+ndenv install v10.14.1
+ndenv global v10.14.1
 ndenv rehash
 
 ## update pip
