@@ -47,7 +47,6 @@ sudo setcap 'cap_net_raw,cap_net_admin+eip' `which hciconfig`
 # change permission of homebridge to cec
 sudo apt-get install cec-utils
 echo hdmi_ignore_cec_init=1 | sudo tee -a /boot/config.txt
-tvservice --off
 
 # execute in daemon
 sudo useradd --system homebridge
@@ -71,3 +70,6 @@ sudo systemctl enable cecclient
 sudo systemctl start cecclient
 sudo systemctl enable homebridge
 sudo systemctl start homebridge
+
+# set crontab
+crontab ~/raspfiles/conf/crontab
