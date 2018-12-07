@@ -39,7 +39,7 @@ cp ~/raspfiles/conf/config.json ~/.homebridge/config.json
 # prepare SOMA smart blinds
 git clone https://github.com/paolotremadio/SOMA-Smart-Shades-HTTP-API.git ~/webshades
 cd webshades
-pip install web.py
+sudo apt-get install python-webpy
 cd
 
 # https://bbs.archlinux.org/viewtopic.php?id=215080
