@@ -17,6 +17,7 @@ ndenv rehash
 
 ## update pip and install direnv
 sudo apt install python-pip direnv
+echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
 
 # install homebridge
 npm install -g homebridge
