@@ -1,0 +1,42 @@
+{
+  "bridge": {
+    "name": "<%= ENV['HOMEBRIDGE_NAME'] %>",
+    "username": "<%= ENV['HOMEBRIDGE_USERNAME'] %>",
+    "port": <%= ENV['HOMEBRIDGE_PORT'] %>,
+    "pin": "<%= ENV['HOMEBRIDGE_PIN'] %>"
+  },
+
+  "platforms": [
+    {
+      "platform": "TadoAC",
+      "username": "<%= ENV['HOMEBRIDGE_TADO_USERNAME'] %>",
+      "password": "<%= ENV['HOMEBRIDGE_TADO_PASSWORD'] %>",
+      "manualControl": true
+    }
+  ],
+  "accessories": [
+    {
+        "name": "Shade 1",
+        "accessory": "MinimalisticHttpBlinds",
+        "get_current_position_url": "http://raspberrypi.local:8080/getposition/<%= ENV['HOMEBRIDGE_SHADE1_ETHER'] %>",
+        "set_target_position_url": "http://raspberrypi.local:8080/setposition/<%= ENV['HOMEBRIDGE_SHADE1_ETHER'] %>/%position%",
+        "set_target_position_method": "GET",
+        "get_current_position_polling_millis": "30000"
+    },
+    {
+        "name": "Shade 2",
+        "accessory": "MinimalisticHttpBlinds",
+        "get_current_position_url": "http://raspberrypi.local:8080/getposition/<%= ENV['HOMEBRIDGE_SHADE2_ETHER'] %>",
+        "set_target_position_url": "http://raspberrypi.local:8080/setposition/<%= ENV['HOMEBRIDGE_SHADE2_ETHER'] %>/%position%",
+        "set_target_position_method": "GET",
+        "get_current_position_polling_millis": "30000"
+    },
+    {
+        "name": "Bath Switch",
+        "accessory": "HTTP-SWITCH",
+        "switchType": "stateless",
+        "timeout": 1000,
+        "onUrl": "<%= ENV['HOMEBRIDGE_PROTA_WEBHOOK_BATHSWITCH_URL'] %>"
+    }
+  ]
+}
