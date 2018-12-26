@@ -16,7 +16,7 @@ ndenv global v10.14.2
 ndenv rehash
 
 ## update pip and install direnv
-sudo apt install python-pip direnv cec-utils
+sudo apt install python-pip python-webpy direnv cec-utils
 echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
 
 # install homebridge
@@ -33,7 +33,6 @@ erb ~/raspfiles/conf/config.json.erb > ~/.homebridge/config.json
 
 # prepare SOMA smart blinds
 git clone https://github.com/paolotremadio/SOMA-Smart-Shades-HTTP-API.git ~/webshades
-sudo apt-get install python-webpy
 
 # https://bbs.archlinux.org/viewtopic.php?id=215080
 sudo setcap 'cap_net_raw,cap_net_admin+eip' `which hcitool`
