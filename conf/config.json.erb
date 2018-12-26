@@ -37,6 +37,12 @@
         "switchType": "stateless",
         "timeout": 1000,
         "onUrl": "<%= ENV['HOMEBRIDGE_PROTA_WEBHOOK_BATHSWITCH_URL'] %>"
+    },
+    {
+        "accessory": "cec",
+        "name": "Display",
+        "type": "power",
+        "address": 0
     }
   ]
 }
