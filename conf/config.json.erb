@@ -52,6 +52,13 @@
         "switchType": "stateless",
         "timeout": 1000,
         "onUrl": "<%= ENV['HOMEBRIDGE_PROTA_WEBHOOK_BATHSWITCH_URL'] %>"
+    },
+    {
+        "name": "OpenGate",
+        "accessory": "HTTP-SWITCH",
+        "switchType": "stateless",
+        "timeout": 1000,
+        "onUrl": "<%= ENV['HOMEBRIDGE_PROTA_WEBHOOK_OPENGATE_URL'] %>"
     }
   ]
 }
