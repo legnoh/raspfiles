@@ -31,6 +31,12 @@
   ],
   "accessories": [
     {
+      "accessory": "NatureRemoAircon",
+      "name": "Air Conditioner",
+      "access_token": "<%= ENV['HOMEBRIDGE_NATURE_REMO_TOKEN'] %>",
+      "appliance_id": ""
+    },
+    {
         "name": "Shade 1",
         "accessory": "MinimalisticHttpBlinds",
         "get_current_position_url": "http://raspberrypi.local:8080/getposition/<%= ENV['HOMEBRIDGE_SHADE1_ETHER'] %>",

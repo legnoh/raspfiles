@@ -9,11 +9,11 @@ echo 'eval "$(anyenv init -)"' >> ~/.bashrc
 exec $SHELL -l
 
 ## install node
-anyenv install ndenv
+anyenv install nodenv
 exec $SHELL -l
-ndenv install v10.14.2
-ndenv global v10.14.2
-ndenv rehash
+nodenv install v10.14.2
+nodenv global v10.14.2
+nodenv rehash
 
 ## update pip and install direnv
 sudo apt install python-pip python-webpy direnv cec-utils
@@ -21,10 +21,10 @@ echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
 
 # install homebridge
 npm install -g homebridge
-npm install -g homebridge-tado-ac
 npm install -g homebridge-http-switch
 npm install -g homebridge-cmdswitch2
-npm install -g https://github.com/paolotremadio/homebridge-minimal-http-blinds
+npm install -g kmaehashi/homebridge-nature-remo-aircon
+npm install -g paolotremadio/homebridge-minimal-http-blinds
 
 # make config file
 mkdir ~/.homebridge
