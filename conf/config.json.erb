@@ -37,6 +37,12 @@
       "appliance_id": ""
     },
     {
+           "accessory": "DaikinAirPurifier",
+           "name": "AirPurifier",
+           "login_id": "<%= ENV['HOMEBRIDGE_DAIKIN_ID'] %>",
+           "password": "<%= ENV['HOMEBRIDGE_DAIKIN_PASSWORD'] %>"
+    },
+    {
         "name": "Shade 1",
         "accessory": "MinimalisticHttpBlinds",
         "get_current_position_url": "http://raspberrypi.local:8080/getposition/<%= ENV['HOMEBRIDGE_SHADE1_ETHER'] %>",

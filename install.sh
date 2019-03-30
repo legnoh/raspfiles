@@ -11,8 +11,8 @@ exec $SHELL -l
 ## install node
 anyenv install nodenv
 exec $SHELL -l
-nodenv install v10.14.2
-nodenv global v10.14.2
+nodenv install v10.15.1
+nodenv global v10.15.1
 nodenv rehash
 
 ## update pip and install direnv
@@ -25,6 +25,7 @@ npm install -g homebridge-http-switch
 npm install -g homebridge-cmdswitch2
 npm install -g kmaehashi/homebridge-nature-remo-aircon
 npm install -g paolotremadio/homebridge-minimal-http-blinds
+npm install -g legnoh/homebridge-daikin-air-purifier
 
 # make config file
 mkdir ~/.homebridge
