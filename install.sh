@@ -23,7 +23,7 @@ echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
 npm install -g homebridge
 npm install -g homebridge-http-switch
 npm install -g homebridge-cmdswitch2
-npm install -g kmaehashi/homebridge-nature-remo-aircon
+npm install -g homebridge-tado-ac
 npm install -g paolotremadio/homebridge-minimal-http-blinds
 npm install -g legnoh/homebridge-daikin-air-purifier
 

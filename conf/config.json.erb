@@ -8,6 +8,12 @@
 
   "platforms": [
     {
+      "platform": "TadoAC",
+      "username": "<%= ENV['HOMEBRIDGE_TADO_USERNAME'] %>",
+      "password": "<%= ENV['HOMEBRIDGE_TADO_PASSWORD'] %>",
+      "manualControl": true
+    },
+    {
       "platform": "cmdSwitch2",
       "name": "CMD Switch",
       "switches": [{
@@ -24,12 +30,6 @@
     }
   ],
   "accessories": [
-    {
-      "accessory": "NatureRemoAircon",
-      "name": "Air Conditioner",
-      "access_token": "<%= ENV['HOMEBRIDGE_NATURE_REMO_TOKEN'] %>",
-      "appliance_id": ""
-    },
     {
            "accessory": "DaikinAirPurifier",
            "name": "AirPurifier",
