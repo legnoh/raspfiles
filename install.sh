@@ -39,7 +39,8 @@ sudo setcap 'cap_net_raw,cap_net_admin+eip' `which hciconfig`
 # install hc-http-switch
 wget https://github.com/legnoh/hc-http-switch/releases/download/v1.0.0/hc-http-switch_v1.0.0_linux_arm7.zip
 unzip hc-http-switch_v1.0.0_linux_arm7.zip
-mv hc-http-switch /usr/local/bin/
+sudo chown root:staff hc-http-switch
+sudo mv hc-http-switch /usr/local/bin/
 
 # execute in daemon
 sudo useradd --system homebridge
