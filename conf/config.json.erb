@@ -6,29 +6,6 @@
     "pin": "<%= ENV['HOMEBRIDGE_PIN'] %>"
   },
 
-  "platforms": [
-    {
-      "platform": "TadoAC",
-      "username": "<%= ENV['HOMEBRIDGE_TADO_USERNAME'] %>",
-      "password": "<%= ENV['HOMEBRIDGE_TADO_PASSWORD'] %>",
-      "manualControlSwitch": true
-    },
-    {
-      "platform": "cmdSwitch2",
-      "name": "CMD Switch",
-      "switches": [{
-         "name" : "Display",
-         "on_cmd": "echo 'on 0' | cec-client -d 1 -s",
-         "off_cmd": "echo 'standby 0' | cec-client -d 1 -s",
-         "state_cmd": "echo 'pow 0' | cec-client -d 1 -s | tail -1 | grep 'power status: on'",
-         "polling": true,
-         "interval": 60,
-         "timeout": 10000,
-         "manufacturer": "IODATA",
-         "model": "LCD-M4K552XDB"
-      }]
-    }
-  ],
   "accessories": [
     {
            "accessory": "DaikinAirPurifier",
@@ -37,34 +14,12 @@
            "password": "<%= ENV['HOMEBRIDGE_DAIKIN_PASSWORD'] %>"
     },
     {
-        "name": "Shade 1",
+        "name": "Shade",
         "accessory": "MinimalisticHttpBlinds",
-        "get_current_position_url": "http://raspberrypi.local:8080/getposition/<%= ENV['HOMEBRIDGE_SHADE1_ETHER'] %>",
-        "set_target_position_url": "http://raspberrypi.local:8080/setposition/<%= ENV['HOMEBRIDGE_SHADE1_ETHER'] %>/%position%",
+        "get_current_position_url": "http://raspberrypi.local:8080/getposition/<%= ENV['HOMEBRIDGE_SHADE_ETHER'] %>",
+        "set_target_position_url": "http://raspberrypi.local:8080/setposition/<%= ENV['HOMEBRIDGE_SHADE_ETHER'] %>/%position%",
         "set_target_position_method": "GET",
         "get_current_position_polling_millis": "30000"
-    },
-    {
-        "name": "Shade 2",
-        "accessory": "MinimalisticHttpBlinds",
-        "get_current_position_url": "http://raspberrypi.local:8080/getposition/<%= ENV['HOMEBRIDGE_SHADE2_ETHER'] %>",
-        "set_target_position_url": "http://raspberrypi.local:8080/setposition/<%= ENV['HOMEBRIDGE_SHADE2_ETHER'] %>/%position%",
-        "set_target_position_method": "GET",
-        "get_current_position_polling_millis": "30000"
-    },
-    {
-        "name": "Bath Switch",
-        "accessory": "HTTP-SWITCH",
-        "switchType": "stateless",
-        "timeout": 1000,
-        "onUrl": "<%= ENV['HOMEBRIDGE_PROTA_WEBHOOK_BATHSWITCH_URL'] %>"
-    },
-    {
-        "name": "OpenGate",
-        "accessory": "HTTP-SWITCH",
-        "switchType": "stateless",
-        "timeout": 1000,
-        "onUrl": "<%= ENV['HOMEBRIDGE_PROTA_WEBHOOK_OPENGATE_URL'] %>"
     }
   ]
 }
