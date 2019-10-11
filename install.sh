@@ -16,7 +16,7 @@ nodenv global v10.15.1
 nodenv rehash
 
 ## update pip and install direnv
-sudo apt install python-pip python-webpy direnv cec-utils
+sudo apt install python-pip python-webpy direnv
 echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
 
 # install homebridge
@@ -28,13 +28,6 @@ npm install -g legnoh/homebridge-daikin-air-purifier
 mkdir ~/.homebridge
 direnv allow # get envrc file!
 erb ~/raspfiles/conf/config.json.erb > ~/.homebridge/config.json
-
-# prepare SOMA smart blinds
-git clone https://github.com/paolotremadio/SOMA-Smart-Shades-HTTP-API.git ~/webshades
-
-# https://bbs.archlinux.org/viewtopic.php?id=215080
-sudo setcap 'cap_net_raw,cap_net_admin+eip' `which hcitool`
-sudo setcap 'cap_net_raw,cap_net_admin+eip' `which hciconfig`
 
 # install hc-http-switch
 wget https://github.com/legnoh/hc-http-switch/releases/download/v1.0.5/hc-http-switch_1.0.5_linux_armv7.tar.gz
@@ -48,7 +41,6 @@ sudo mkdir /var/homebridge
 sudo chown homebridge:homebridge /var/homebridge/
 sudo cp ~/raspfiles/conf/etc-default.conf /etc/default/homebridge
 sudo cp ~/raspfiles/conf/service-homebridge.ini /etc/systemd/system/homebridge.service
-sudo cp ~/raspfiles/conf/service-soma-blinds.ini /etc/systemd/system/somablinds.service
 sudo cp ~/raspfiles/conf/service-hc-opengate.ini /etc/systemd/system/opengate.service
 sudo cp ~/.homebridge/config.json /var/homebridge/
 sudo mkdir -r /var/homebridge/persist
@@ -58,8 +50,6 @@ sudo chmod -R 0777 /var/homebridge
 sudo systemctl daemon-reload
 sudo systemctl enable opengate
 sudo systemctl start opengate
-sudo systemctl enable somablinds
-sudo systemctl start somablinds
 sudo systemctl enable homebridge
 sudo systemctl start homebridge
 
