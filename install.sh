@@ -37,8 +37,8 @@ sudo setcap 'cap_net_raw,cap_net_admin+eip' `which hcitool`
 sudo setcap 'cap_net_raw,cap_net_admin+eip' `which hciconfig`
 
 # install hc-http-switch
-wget https://github.com/legnoh/hc-http-switch/releases/download/v1.0.2/hc-http-switch_v1.0.2_linux_arm7.zip
-unzip hc-http-switch_v1.0.2_linux_arm7.zip
+wget https://github.com/legnoh/hc-http-switch/releases/download/v1.0.5/hc-http-switch_1.0.5_linux_armv7.tar.gz
+tar zxf hc-http-switch_1.0.5_linux_armv7.tar.gz
 sudo chown root:staff hc-http-switch
 sudo mv hc-http-switch /usr/local/bin/
 
