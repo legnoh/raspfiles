@@ -16,12 +16,11 @@ nodenv global v10.15.1
 nodenv rehash
 
 ## update pip and install direnv
-sudo apt install python-pip python-webpy direnv
+sudo apt install direnv
 echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
 
 # install homebridge
 npm install -g homebridge
-npm install -g paolotremadio/homebridge-minimal-http-blinds
 npm install -g legnoh/homebridge-daikin-air-purifier
 
 # make config file
@@ -44,7 +43,6 @@ sudo cp ~/raspfiles/conf/service-homebridge.ini /etc/systemd/system/homebridge.s
 sudo cp ~/raspfiles/conf/service-hc-opengate.ini /etc/systemd/system/opengate.service
 sudo cp ~/.homebridge/config.json /var/homebridge/
 sudo mkdir -r /var/homebridge/persist
-sudo chown -R homebridge:homebridge ~/webshades
 exec $SHELL -l
 sudo chmod -R 0777 /var/homebridge
 sudo systemctl daemon-reload
