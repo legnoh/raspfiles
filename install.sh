@@ -29,8 +29,8 @@ direnv allow # get envrc file!
 erb ~/raspfiles/conf/config.json.erb > ~/.homebridge/config.json
 
 # install hc-http-switch
-wget https://github.com/legnoh/hc-http-switch/releases/download/v1.0.6/hc-http-switch_1.0.6_linux_armv7.tar.gz
-tar zxf hc-http-switch_1.0.6_linux_armv7.tar.gz
+wget https://github.com/legnoh/hc-http-switch/releases/download/v1.0.7/hc-http-switch_1.0.7_linux_armv7.tar.gz
+tar zxf hc-http-switch_1.0.7_linux_armv7.tar.gz
 sudo chown root:staff hc-http-switch
 sudo mv hc-http-switch /usr/local/bin/
 
