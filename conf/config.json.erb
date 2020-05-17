@@ -8,10 +8,19 @@
 
   "accessories": [
     {
-           "accessory": "DaikinAirPurifier",
-           "name": "AirPurifier",
-           "login_id": "<%= ENV['HOMEBRIDGE_DAIKIN_ID'] %>",
-           "password": "<%= ENV['HOMEBRIDGE_DAIKIN_PASSWORD'] %>"
+        "name": "Shade",
+        "accessory": "MinimalisticHttpBlinds",
+        "get_current_position_url": "http://cranberry.local:8080/getposition/<%= ENV['HOMEBRIDGE_SHADE_ETHER'] %>",
+        "set_target_position_url": "http://cranberry.local:8080/setposition/<%= ENV['HOMEBRIDGE_SHADE_ETHER'] %>/%position%",
+        "set_target_position_method": "GET",
+        "get_current_position_polling_millis": "30000"
+    }
+  ],
+
+  "platforms": [
+    {
+      "platform": "Sesame",
+      "token": "<%= ENV['HOMEBRIDGE_SESAME_TOKEN'] %>"
     }
   ]
 }
