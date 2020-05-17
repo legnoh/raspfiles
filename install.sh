@@ -51,7 +51,7 @@ sudo cp ~/raspfiles/conf/etc-default.conf /etc/default/homebridge
 sudo cp ~/raspfiles/conf/service-homebridge.ini /etc/systemd/system/homebridge.service
 sudo cp ~/raspfiles/conf/service-soma-blinds.ini /etc/systemd/system/somablinds.service
 sudo cp ~/.homebridge/config.json /var/homebridge/
-sudo mkdir -r /var/homebridge/persist
+sudo mkdir -p /var/homebridge/persist
 sudo chown -R homebridge:homebridge ~/webshades
 exec $SHELL -l
 sudo chmod -R 0777 /var/homebridge
